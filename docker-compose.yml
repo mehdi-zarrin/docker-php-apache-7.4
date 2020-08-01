@@ -1,0 +1,12 @@
+version: "2"
+services:
+
+  trivago_web:
+    container_name: trivago_web_server
+    build:
+      context: .
+      dockerfile: container-build/web/Dockerfile
+    ports:
+    - "8084:80"
+    volumes:
+    - .:/var/www
